@@ -23,6 +23,9 @@ class test {
     }
 
     /* add methods for blocks */
+    test({x}){
+        return x
+    }
 }
 
-Scratch.extensions.register(new ScratchFetch())
+Scratch.extensions.register(new test())
