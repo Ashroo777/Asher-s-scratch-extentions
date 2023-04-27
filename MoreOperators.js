@@ -97,7 +97,9 @@ class test {
     }
 }
 
-Scratch.extensions.register(new test())
+//Scratch.extensions.register(new test())
+
+
 (function() {
     var extensionInstance = new test(window.vm.extensionManager.runtime)
     var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
