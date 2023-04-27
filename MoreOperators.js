@@ -97,7 +97,6 @@ class test {
     }
 }
 
-//Scratch.extensions.register(new test())
 
 
 (function() {
