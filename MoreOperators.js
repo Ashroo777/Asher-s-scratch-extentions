@@ -98,3 +98,8 @@ class test {
 }
 
 Scratch.extensions.register(new test())
+(function() {
+    var extensionInstance = new test(window.vm.extensionManager.runtime)
+    var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
+    window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
+})()
