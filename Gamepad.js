@@ -4,7 +4,6 @@ class Gamepad {
         this.currentMSecs = -1
         this.previousButtons = []
         this.currentButtons=[]
-
     }
     
     getInfo() {
@@ -35,16 +34,16 @@ class Gamepad {
              'menus':{
                 'pressReleaseMenu':[{text:'press',value:1},{text:"release",value:0}],
              }
-        }
+        };
     }
 
     /* add methods for blocks */
-update(){
-    if(this.runtime.currentMSecs==this.currentMSecs)
+update() {
+    if (this.runtime.currentMSecs == this.currentMSecs)
         return // not a new polling cycle
     
-    this.currentMSecs=this.runtime.currentMSecs
-    var gamepads = navigator.getGamepads
+    this.currentMSecs = this.runtime.currentMSecs
+    var gamepads = navigator.getGamepads()
     if (gamepads == null || gamepads.length == 0 || gamepads[0] == null) {
         this.previousButtons = []
         this.currentButtons = []
@@ -58,7 +57,7 @@ update(){
         this.previousButtons.push(false)
         }
     }
-    else{
+    else {
         this.previousButtons = this.currentButtons
     }
     this.currentButtons = []
