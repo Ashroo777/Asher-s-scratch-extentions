@@ -71,6 +71,20 @@ class test {
                     'opcode':'blank',
                     'blockType':'reporter',
                     'text':"‎ "
+                },
+                {
+                    "opcode":"squareRoot",
+                    "blockType":"reporter",
+                    "text":"√[x]",
+                    "arguments":{
+                        "x":{
+                            "type":"number",
+                            "defaultValue":" "
+                        }
+                        
+                        
+
+                    }
                 }
              ]
         }
@@ -94,6 +108,9 @@ class test {
     }
     blank({}){
         return " "
+    }
+    squareRoot({x}){
+      Math.sqrt(x)  
     }
 }
 
