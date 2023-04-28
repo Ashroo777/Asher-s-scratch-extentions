@@ -81,11 +81,13 @@ class test {
                             "type":"number",
                             "defaultValue":" "
                         }
+
                         
                         
 
                     }
-                }
+                },
+                
              ]
         }
     }
@@ -112,6 +114,7 @@ class test {
     squareRoot({x}){
       return Math.sqrt(x)  
     }
+    
 }
 
 Scratch.extensions.register(new test())
