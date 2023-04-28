@@ -86,7 +86,7 @@ buttonPressedReleased({b,eventType}) {
 
 //for unsandboxed mode
 (function() {
- var extensionInstance = new gamepad(window.vm.extensionManager.runtime)
+ var extensionInstance = new Gamepad(window.vm.extensionManager.runtime)
  var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
  window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
 })()
