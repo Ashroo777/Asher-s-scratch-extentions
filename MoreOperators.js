@@ -97,9 +97,10 @@ class test {
     }
 }
 
-
-(function() {
-    var extensionInstance = new test(window.vm.extensionManager.runtime)
-    var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
-    window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
-})()
+Scratch.extensions.register(new test())
+//for unsandboxed mode
+//(function() {
+ //   var extensionInstance = new test(window.vm.extensionManager.runtime)
+   // var serviceName = window.vm.extensionManager._registerInternalExtension(extensionInstance)
+    //window.vm.extensionManager._loadedExtensions.set(extensionInstance.getInfo().id, serviceName)
+//})()
