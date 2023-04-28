@@ -9,8 +9,8 @@ class Gamepad {
     
     getInfo() {
         return {
-            "id": "MoreOperators",
-            "name": "More Operators",
+            "id": "Gamepad",
+            "name": "Gamepad",
             'color1':'#59c059',
             'color2':"#5db05d",
             "blocks": [ 
@@ -40,9 +40,9 @@ class Gamepad {
 
     /* add methods for blocks */
 update(){
-    if(this.runtime.currentMSecs==this.currentMSecs){
+    if(this.runtime.currentMSecs==this.currentMSecs)
         return // not a new polling cycle
-    }
+    
     this.currentMSecs=this.runtime.currentMSecs
     var gamepads = navigator.getGamepads
     if (gamepads == null || gamepads.length == 0 || gamepads[0] == null) {
@@ -81,7 +81,7 @@ buttonPressedReleased({b,eventType}) {
          }
     }
     return false
-}   
+    }   
 }
 
 //for unsandboxed mode
