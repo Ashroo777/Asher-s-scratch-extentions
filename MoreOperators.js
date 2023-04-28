@@ -110,7 +110,7 @@ class test {
         return " "
     }
     squareRoot({x}){
-      Math.sqrt(x)  
+      return Math.sqrt(x)  
     }
 }
 
